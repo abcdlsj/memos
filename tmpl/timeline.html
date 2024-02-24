@@ -1,0 +1,20 @@
+{{template "header" .}}
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-2xl font-bold mb-4">Timeline</h1>
+        <ul class="space-y-4">
+            {{range .}}
+            <li>
+                <div class="bg-white rounded shadow p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-gray-700 font-bold">{{.Title}}</span>
+                        <span class="text-gray-500 text-sm">{{.Tag}}</span>
+                    </div>
+                    <p class="text-gray-600">{{.Content}}</p>
+                </div>
+            </li>
+            {{end}}
+        </ul>
+    </div>
+</body>
+{{template "footer" .}}

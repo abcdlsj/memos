@@ -1,0 +1,25 @@
+{{template "header" .}}
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-2xl font-bold mb-4">Create Note</h1>
+        <form action="/memo/create" method="POST">
+            <div class="mb-4">
+                <label for="title" class="block text-gray-700 font-bold mb-2">Title:</label>
+                <input type="text" id="title" name="title" class="border border-gray-300 rounded px-4 py-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="tag" class="block text-gray-700 font-bold mb-2">Tag:</label>
+                <input type="text" id="tag" name="tag" class="border border-gray-300 rounded px-4 py-2 w-full">
+            </div>
+            <div class="mb-4">
+                <label for="content" class="block text-gray-700 font-bold mb-2">Content:</label>
+                <textarea id="content" name="content" class="border border-gray-300 rounded px-4 py-2 w-full" rows="6"></textarea>
+            </div>
+            <div>
+                <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Save</button>
+                <button type="reset" class="bg-gray-300 hover:bg-gray-400 text-gray-700 font-bold py-2 px-4 rounded ml-4">Cancel</button>
+            </div>
+        </form>
+    </div>
+</body>
+{{template "footer" .}}

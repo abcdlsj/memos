@@ -1,0 +1,25 @@
+{{template "header" .}}
+<!-- add tag filter, if choose tag -->
+<body class="bg-gray-100">
+    <div class="container mx-auto py-8">
+        <h1 class="text-2xl font-bold mb-4">Memos</h1>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {{range .}}
+            <div class="bg-white rounded shadow p-4">
+                <div class="flex justify-between items-center mb-2">
+                    <span class="text-gray-700 font-bold">{{.Title}}</span>
+                </div>
+                <!-- content 最多显示 100 个字符，多了换行 -->
+                <p class="text-gray-600 line-clamp-5">{{.Content}}</p>
+                {{if ne .Tag ""}}
+                <span class="text-gray-500 text-sm">#{{.Tag}}</span>
+                {{end}}
+            </div>
+            {{end}}
+        </div>
+        <div class="mt-8">
+            <a href="/create.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">Create Note</a>
+        </div>
+    </div>
+</body>
+{{template "footer" .}}

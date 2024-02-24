@@ -1,0 +1,7 @@
+*.db
+
+memos
+
+package-lock.json
+
+static/css/main.css

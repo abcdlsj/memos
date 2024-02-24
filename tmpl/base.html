@@ -1,0 +1,27 @@
+{{define "header"}}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memos</title>
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <!-- <script src="https://unpkg.com/alpinejs" defer></script> -->
+  </head>
+  <main>
+    <header
+      class="bg-blue-400 h-64 px-4 flex flex-col justify-center text-center"
+    >
+      <h1 class="text-white text-5xl font-semibold">Memos</h1>
+      <p class="text-white mt-2">Take your `memos`.</p>
+    </header>
+
+    {{end}} {{define "footer"}}
+  </main>
+  <footer class="bg-gray-100 border-t border-gray-200 py-2 mt-6">
+    <div class="container mx-auto px-4 leading-6 text-right">
+      From <a href="https://github.com/abcdlsj/" class="text-blue-500">abcdlsj</a>
+    </div>
+  </footer>
+</html>
+{{end}}
